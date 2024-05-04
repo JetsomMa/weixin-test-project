@@ -1,0 +1,1 @@
+<view class="content"><button bindtap="{{a}}">获取openid</button><button bindtap="{{b}}">获取access_token</button></view>
