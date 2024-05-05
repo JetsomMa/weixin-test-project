@@ -25,6 +25,7 @@ const _sfc_main = {
         const loginRes = await common_vendor.index.login({ provider });
         if (loginRes.errMsg === "login:ok") {
           this.code = loginRes.code;
+          console.log(this.code);
           return this.code;
         } else {
           console.error(loginRes);
@@ -63,8 +64,9 @@ const _sfc_main = {
 };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
-    a: common_vendor.o((...args) => $options.getOpenId && $options.getOpenId(...args)),
-    b: common_vendor.o((...args) => $options.getAccessToken && $options.getAccessToken(...args))
+    a: common_vendor.o((...args) => $options.getCode && $options.getCode(...args)),
+    b: common_vendor.o((...args) => $options.getOpenId && $options.getOpenId(...args)),
+    c: common_vendor.o((...args) => $options.getAccessToken && $options.getAccessToken(...args))
   };
 }
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/jetsommax/Documents/HBuilderProjects/weixin-test-project/pages/index/index.vue"]]);

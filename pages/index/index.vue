@@ -1,5 +1,6 @@
 <template>
 	<view class="content">
+		<button @click="getCode">获取code</button>
 		<button @click="getOpenId">获取openid</button>
 		<button @click="getAccessToken">获取access_token</button>
 	</view>
@@ -31,6 +32,7 @@
 					const loginRes = await uni.login({provider: provider})
 					if(loginRes.errMsg === "login:ok") {
 						this.code = loginRes.code
+						console.log(this.code)
 						return this.code
 					} else {
 						console.error(loginRes)
